@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>LE Dev</title>
+    <!--Simepre va primero el normalize-->
+    <link rel="preload" href="styles CSS/normalize.css" as="style">
+    <link rel="stylesheet" href="styles CSS/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!--Importar google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="styles CSS/styles.css" as="style">
+    <link rel="stylesheet" href="styles CSS/styles.css">
+    
 
 </head>
 <body>
     <header>
         <h1 class="titulo">Lionel Espadas <span>Developer</span></h1>
     </header>
-
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Sobre mi</a>
-        <a href="#">Clientes</a>
-        <a href="#">Constacto</a>
-        
-    </nav>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Inicio</a>
+            <a href="#">Sobre mi</a>
+            <a href="#">Clientes</a>
+            <a href="#">Constacto</a>
+        </nav>
+    </div>
 
     <section>
         <h2>Diseño y desarrollo web</h2>
