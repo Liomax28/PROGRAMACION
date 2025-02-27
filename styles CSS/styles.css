@@ -11,8 +11,30 @@
 html{
     /*Conversion para web*/
     font-size: 62.5%;
+    font-family: krub, Helvetica, sans-serif;
+    /*Hack para modelo de caja*/
+    box-sizing: border-box;
     
 }
+*, *::before, *::after{
+    /*Hack para modelo de caja*/
+    box-sizing: inherit;
+}
+/*Tipografia*/
+h1{
+    font-size: 3.8rem;
+
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h1{
+    text-align: center;
+}
+
 body{
     /*16 px es el estandar para navegadores */
     font-size: 16px;
@@ -50,6 +72,8 @@ body{
 .navegacion-principal{
     /**padding: 1rem;**/
     display: flex;
+    flex-direction: column;
+    align-items: center;
     /**Justufy-content para filas 
     y aling-items para columnas**/
     justify-content: space-between;
@@ -58,9 +82,10 @@ body{
 
 }
 
-@media(main-width: 768px) {
+@media(min-width: 768px) {
     .navegacion-principal{
         flex-direction: row;
+        justify-content: space-between;
     }
  
 }
@@ -75,6 +100,65 @@ body{
     background-image: url('../img/hero.jpg');
     background-repeat: no-repeat;
     background-size: cover; /*cover subre la imagen con todo el tamaño*/
+    height: 450px;/*Altura pora el elemento hero*/
+    position: relative;/*Para manipular la posicion, el padre simepre debe ser relative*/
+
+}
+.contenido-hero{
+    /*Para manipilar la psicion, el hijo simpre debe ser relative*/
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);/*al 70%*/
+    width: 100%;
+    height: 100%;
+    /*Alineal vertical y horizontalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.contenido-hero p,
+.contenido-hero h2{
+    color: var(--blanco);
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+
+
+}
+
+.btn{
+    background-color: var(--secundario);/*Color de fonde del boton*/
+    color: var(--blanco);/*Color del texto*/
+    /*Espacio interiro al boton. El primer valor es top-bottom, el segundo valor right-left*/
+    padding: 1rem 3rem;
+    /*Poner margen solo arriba*/
+    margin-top: 3rem;
+    /*Tamaño de letra*/
+    font-size: 2rem;
+    /*Quitar subrayado*/
+    text-decoration: none;
+    /*Convertit texto en mayusculas*/
+    text-transform: uppercase;
+    /*Texto en negritas*/
+    font-weight: bold;
+    /*Borde redondeado*/
+    border-radius: .5rem;
+    /*Ancho del boton al 90% para diseño movil*/
+    width: 90%;
+    /*Alineal el texto al centro*/
+    text-align: center;
+
+}
+
+/**/
+@media(min-width: 768px) {
+    .btn{
+        width: auto;
+    }
+ 
 }
 
 
