@@ -82,43 +82,45 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At numquam ut aperiam maiores quia eaque consectetur incidunt minus consequuntur dolore veritatis, reprehenderit, eveniet libero. Excepturi iste autem aut veritatis id?</p>
         </section>
         </div> <!--Cierre de mi div.servicios-->
-    </main>
+
 
     <section>
         <h2>Contacto</h2>
-        <form>
+        <form class="formulario">
             <fieldset>
                 <legend>Llena tus datos para establecer contacto</legend>
-                <div>
-                    <label>Nombre</label>
-                    <input type="text" placeholder="Tu Nombre">
-                 </div>
-                 <div>
-                    <label>Teléfono</label>
-                    <input type="tel" placeholder="Tu Teléfono">
-                </div>
-                <div>
-                    <label>Correo</label>
-                    <input type="email" placeholder="Tu email">
-                </div>
-                <div>
-                    <label>Mensaje</label>
-                    <textarea></textarea>
-                </div>
-                    <div>
-                        <input type="submit" value="Enviar">
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Tu Nombre">
                     </div>
-
+                    <div class="campo">
+                        <label>Teléfono</label>
+                        <input type="tel" placeholder="Tu Teléfono">
+                    </div>
+                    <div class="campo">
+                        <label>Correo</label>
+                        <input type="email" placeholder="Tu email">
+                    </div>
+                    <div class="campo">
+                        <label>Mensaje</label>
+                        <textarea></textarea>
+                    </div>
+                </div> <!--Cierre de div.contenedor-campos-->
+                    <div class="alinear-derecha flex">
+                        <input class="btn w-sm-100" type="submit" value="Enviar">
+                    </div>
             </fieldset>
 
         </form>
         
     </section>
-
-    <footer>
-        <p>Todos los derechos reservados © Lionel Espadas</p>
-    </footer>
-
+    </main>
+    <div class="pie">
+        <footer>
+            <p>Todos los derechos reservados © Lionel Espadas</p>
+        </footer>
+    </div>
 </body>
 </html>  
 
